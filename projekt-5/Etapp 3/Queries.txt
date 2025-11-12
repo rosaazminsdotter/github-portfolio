@@ -1,0 +1,105 @@
+﻿//SQL-query 1
+SELECT Namn
+FROM Anställd
+WHERE Lön > 40000
+ORDER BY Namn
+
+
+//SQL-query 3
+SELECT Namn, Email
+FROM Gäst
+JOIN Gästbokning USING (GästID)
+WHERE Rabattkod IS NOT NULL
+
+
+//SQL-query 5
+SELECT FB.*, HotellNamn, Namn
+FROM FöretagsBokning FB
+JOIN Anställd A
+ON A.AnställdID = FB.AnställdID
+JOIN Hotell H
+ON H.HotellID = A.HotellID
+WHERE FB.AnställdID IS NOT NULL
+
+
+//SQL-query 6
+SELECT HotellNamn, COUNT(Rumsnummer)
+FROM Hotell H
+JOIN Rum R
+ON R.HotellID = H.HotellID
+WHERE R.Tillgänglighet = 'Inte Tillgängligt'
+GROUP BY H.HotellID
+
+
+//SQL-query 8
+SELECT HotellNamn, Adress, COUNT(Rumsnummer)
+FROM Hotell H
+JOIN Rum R
+ON R.HotellID = H.HotellID
+WHERE R.Tillgänglighet = 'Tillgängligt'
+GROUP BY H.HotellID
+
+
+//SQL-query 11
+SELECT Namn, HotellNamn, MAX(Omdöme)
+FROM Hotell H
+JOIN Rum R
+ON H.HotellID = R.HotellID
+JOIN GästBokning_Rum GBR
+ON GBR.RumID = R.RumID
+JOIN GästBokning GB
+ON GB.BokningsID = GBR.BokningsID
+JOIN Gäst G
+ON G.GästID = GB.GästID
+
+
+//SQL-query 13
+
+
+SELECT Namn, Email
+FROM Hotell H
+JOIN Rum R 
+ON H.HotellID = R.HotellID
+JOIN GästBokning_Rum GBR 
+ON GBR.RumID = R.RumID
+JOIN GästBokning GB 
+ON GB.BokningsID = GBR.BokningsID
+JOIN Gäst G 
+ON G.GästID = GB.GästID
+WHERE H.Omdöme > (SELECT AVG(Omdöme) FROM Hotell)
+GROUP BY G.Namn
+
+
+//SQL-query 14
+SELECT HotellNamn, Adress, MAX(Omdöme) AS Omdöme
+FROM Hotell
+
+
+//SQL-query 16
+SELECT Namn, Email
+FROM Hotell H
+JOIN Rum R 
+ON H.HotellID = R.HotellID
+JOIN GästBokning_Rum GBR 
+ON GBR.RumID = R.RumID
+JOIN GästBokning GB 
+ON GB.BokningsID = GBR.BokningsID
+JOIN Gäst G 
+ON G.GästID = GB.GästID
+WHERE H.Stad = 'Stockholm'
+GROUP BY G.Namn
+
+
+//SQL-query 18
+SELECT Namn
+FROM Hotell H
+JOIN Rum R 
+ON H.HotellID = R.HotellID
+JOIN GästBokning_Rum GBR 
+ON GBR.RumID = R.RumID
+JOIN GästBokning GB 
+ON GB.BokningsID = GBR.BokningsID
+JOIN Gäst G 
+ON G.GästID = GB.GästID
+WHERE H.Stad = (SELECT Stad FROM Hotell WHERE HotellNamn = 'Grand Hotel')
+GROUP BY G.Namn
