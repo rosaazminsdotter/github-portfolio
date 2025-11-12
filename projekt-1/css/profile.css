@@ -1,0 +1,111 @@
+body 
+{
+    display: flex;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    color: rgb(74, 74, 74);
+    margin: 0; 
+    background-color: #f2f2f2;
+}
+
+.flex-container 
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Gör background 95% av fönstrets bredd */
+    justify-content: space-around; /* Centrerar flexcontainern horisontellt */
+    background-color: rgb(81, 100, 92);
+    gap: 0.1px;
+    margin: auto;
+}
+
+.head
+{
+    margin-top: 3%;
+    margin-left: 3%;
+}
+
+a 
+{
+    color:  rgb(74, 74, 74);
+    font-weight: bold; 
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: rgb(51, 50, 50); 
+}
+
+.flex-item 
+{
+    margin-left: auto;
+    margin-right: auto;
+    flex: 0 0 35%; 
+    width: 55%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: rgb(226, 232, 230);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin-top:5%;
+    margin-bottom:5%;
+    text-align: center;
+    border-radius: 2px;
+}
+
+img 
+{
+    margin-top: 10%;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border: 3px solid  rgb(81, 100, 92);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"]
+{
+    width: 100%; /* Tar upp hela bredden inom formuläret */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1.5px solid #696969;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+input[type="file"]
+{
+    margin-left:18%;
+}
+
+input[type="text"]::placeholder, 
+input[type="password"]::placeholder
+{
+    text-align: center; /* Centrerar placeringshållaren */
+    color: rgb(74, 74, 74);
+}
+
+input[type="submit"] 
+{
+    background-color: rgb(74, 74, 74); 
+    color: #ffffff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover 
+{
+    background-color: rgb(51, 50, 50); 
+}
+
+.succeed
+{
+color: green;
+}
+
+.fail
+{
+color:rgb(227, 49, 49);
+}
+
+
+

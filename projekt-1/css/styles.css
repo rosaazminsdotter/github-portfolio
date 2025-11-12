@@ -1,0 +1,97 @@
+
+        body 
+        {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+            display: flex;
+            justify-content: center; /* Centrerar innehållet horisontellt */
+            align-items: center; /* Centrerar innehållet vertikalt */
+            height: 100vh; /* Tar upp hela sidans höjd */
+            margin: 0; /* Tar bort standardmarginaler */
+            background-color: #f2f2f2; /* Bakgrundsfärg */
+            border-radius: 5px;
+            color: rgb(74, 74, 74);
+        }
+        
+        .flex-container 
+        {
+            display: flex;
+            width: 95%; /* Gör background 95% av fönstrets bredd */
+            justify-content: space-around; /* Centrerar flexcontainern horisontellt */
+            background-color: rgb(81, 100, 92);
+            gap: 0.1px;
+            margin: auto;
+        }
+
+        .flex-item 
+        {
+            flex: 0 0 35%; 
+            width: 80%;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: rgb(226, 232, 230);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            margin-top:5%;
+            margin-bottom:5%;
+            text-align: center;
+            border-radius: 2px;
+        }
+       
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"]
+        {
+            width: 100%; /* Tar upp hela bredden inom formuläret */
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1.5px solid #696969;
+            border-radius: 2px;
+            box-sizing: border-box;
+            color: black;
+        }
+
+        input[type="text"]::placeholder, 
+        input[type="password"]::placeholder 
+        {
+            text-align: center; /* Centrerar placeringshållaren */
+        }
+
+        input[type="submit"] 
+        {
+            background-color: rgb(74, 74, 74); 
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover 
+        {
+            background-color: rgb(51, 50, 50); 
+        }
+
+        p 
+        {
+            text-align: center; /* Centrerar texten */
+            margin-top: 10px; /* Lägger till lite extra utrymme överst */
+        }
+
+        .register-link 
+        {
+            color:  rgb(74, 74, 74);
+            text-decoration: none; /* Tar bort understrykningen */
+        }
+
+        .register-link:hover 
+        {
+            text-decoration: underline; /* Understrykning vid hover */
+        }
+
+        img 
+        {
+            width: 100%; /* Bilden anpassar sig till bredden av flex-item */
+            height: 50%; /* Behåller bildens proportioner */
+            border-radius: 2px;
+        }
+
+        .error
+        {
+            color:rgb(244, 54, 54);
+        }

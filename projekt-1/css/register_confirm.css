@@ -1,0 +1,37 @@
+body, html 
+{
+    height: 100%;
+    margin: 0;
+    background-color: rgb(226, 232, 230);
+    
+    
+}
+
+h1
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    color: rgb(74, 74, 74);
+    background-color: rgb(226, 232, 230);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    color: rgb(49, 49, 49);
+    font-size: 20px;
+    background-color: rgb(81, 100, 92);
+}
+
+.text
+{
+    text-decoration: none;
+    color: rgb(173, 179, 176);
+}
+
+.text:hover 
+{
+    text-decoration: underline;
+}
