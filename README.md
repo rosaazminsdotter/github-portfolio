@@ -6,7 +6,7 @@ I am studying Information Systems at Uppsala University with a passion for IT an
 C#, Python, HTML, CSS, PHP, SQL
 
 **Other**
-VS Code, Unity
+VS Code, .NET, Unity
 
 **Projects**
 Here is a short summory of a couple of the different projects you will find in this portfolio
