@@ -5,26 +5,13 @@ namespace Soduko_Grupp47
     public class Play
     {
         Board playBoard;
-        // 1: Objektkomposition
-        // 2: Klassen ‘Play’ har ett fält av klassen ‘Board’
-        // 3: Play has-a board. Vi spelar med ett bräde
+
         Player player;
 
         int helpCount = 0;
-        // 1: Inkapsling
-        // 2: privat int värde, Sparar antalet gånger man har kallat på Help(int row, int col) metoden. Använder även den för att beräkna CalculatedScore!
-        // 3: Den används enbart i denna klass, den ska alltså inte gå att manipulera utanför! Därför valde vi att ha den som private
         int wrong = 0;
         
         int totalScore = 100;
-       
-        /*public int CalculatedScore
-        {
-            get => totalScore - 10 * helpCount - 20 * wrong;         
-        }*/
-        // 1: Computed properties
-        // 2: Vi ville göra sudokut mer "spännande" så vi skapade detta poäng system! Poäng subtraheras under spelets omgång varje gång man skriver help, eller varje gång man fått fel efter man skrivit done 
-        // 3: Vi ville ha en simpel matematisk metod som använde sig av helpCount, wrong och totalScore. Så att spelaren ska kunna se hur många poäng de har kvar samt att spelet slutar när poängen nått 0 eller minus.
 
         public Play()
         {
@@ -162,9 +149,6 @@ namespace Soduko_Grupp47
                                 }
                                 else
                                 {
-                                    // 1: Subtypspolymorfism
-                                    // 2: En ICell kan antingen vara SetCell eller ChangableCell. Deras metoder 'ChangeCell' beteer sig olika. I SetCells kommer ChangeCell metoden att ge ett felmeddelande medans den i ChangableCell kommer att ändra cellens värde, alternativt ge ett felmeddelande om inputen inte är mellan 1-9. 
-                                    // 3: Celler beter sig olika beroende på vilken typ av cell det är. 
                                     ICell cell = playBoard.level.Board[row - 1, col - 1];
                                     cell.ChangeCell(value);
                                     playBoard.ClearBoard();

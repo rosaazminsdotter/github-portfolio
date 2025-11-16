@@ -8,10 +8,6 @@ namespace Soduko_Grupp47
 {
     public class Easy : Level
     {
-        // 1: Arv av klasser
-        // 2: Vi har använt oss av arv av Level-klassen för att skapa olika svårighetsgrader. I detta fall Easy
-        // 3: Vi har gjort de för att vi ville återanvända och specialisera funktionalitet från den grundläggande klassen Level till specifika nivåer.
-
         public Easy()
         {
             SetBoard();
@@ -72,8 +68,6 @@ namespace Soduko_Grupp47
             Board[8, 4] = new SetCell(7);
             Board[8, 7] = new SetCell(5);
         }
-
-       
 
         protected override void SetFacit()
         {

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Soduko_Grupp47")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b90223dbd0f476119bba791ee0930d85850c699")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+886c9a1cf693cf9d9649ffe5ab06bb97df103f10")]
 [assembly: System.Reflection.AssemblyProductAttribute("Soduko_Grupp47")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Soduko_Grupp47")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

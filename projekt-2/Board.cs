@@ -10,10 +10,6 @@ namespace Soduko_Grupp47
     public class Board
     {
         public Level level;
-
-        // 1: BeroendeInjektion
-        // 2: Vilken level som helst kan sättas in här. 
-        // 3: En board kan ha olika levlar. Så beroende på vilken level de har kommer brädet att fungera olika.  
         public Board(Level level)
         {
             this.level = level;
